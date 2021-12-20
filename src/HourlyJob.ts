@@ -1,29 +1,24 @@
 import Job from "./Job";
 
-class SalaryJob implements Job {
-    addExperience(): any {
-        throw new Error("Method not implemented.");
-    }
-    salary: number;
+class HourlyJob implements Job {
+    hourlyWage:number;
     title: string;
     yearsRequired: number;
     remote: boolean;
     constructor(
-        salary: number,
+        hourlyWege: number,
         title: string,
         yearsRequired: number = 0,
-        remote: boolean = false
+        remote: boolean = false,
     ) {
-        this.salary = salary,
+        this.hourlyWage = hourlyWege,
         this.title = title,
         this.yearsRequired = yearsRequired,
         this.remote = remote
     }
-
     getAnnualPay(): number {
-        return this.salary;
+        return this.hourlyWage * 2000
     }
 
 }
-
-export default SalaryJob;
+export default HourlyJob;
