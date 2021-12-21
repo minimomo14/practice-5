@@ -4,6 +4,7 @@ import Job from "../src/Job";
 import HourlyJob from "../src/HourlyJob";
 import SalaryJob from "../src/SalaryJob";
 
+
 describe("RemoteCandidate", () => {
     test("the name and timezone are set from the constructor parameter", () => {
         let cookies:RemoteCandidate = new RemoteCandidate("Sandy", "Pacific Time");
